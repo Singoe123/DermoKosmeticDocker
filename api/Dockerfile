@@ -2,7 +2,7 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY spring-api/DKapi.jar app.jar
+COPY api/DKapi.jar app.jar
 
 EXPOSE 8080
 
