@@ -2,7 +2,7 @@ services:
   spring:
     build:
       context: .
-      dockerfile: ./spring-api/Dockerfile
+      dockerfile: ./api/Dockerfile
     container_name: spring
     ports:
       - "8080:8080"
@@ -18,4 +18,8 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - pgsql_data:/data/db
+
+volumes:
+  pgsql_data:
+    driver: local
